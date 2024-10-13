@@ -1,0 +1,121 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999; /* High z-index to ensure it's above other elements */
+}
+
+.popup-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+    z-index: 998; /* Slightly lower z-index than the popup */
+}
+
+.popup-inner {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    z-index: 1000; /* Higher z-index than the backdrop */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for better visibility */
+    position: relative; /* Positioned relative to the backdrop */
+}
+
+.ppopup-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.inner-button{
+    padding: 10px 20px;
+    width: 100px;
+    height: auto;
+    background: #f08181;
+    cursor: pointer;
+    border-radius: 50px;
+    z-index: 1001; /* Ensure button is on top */
+}
+
+
+
+
+/* Base styles for all buttons */
+.polygon-button {
+    width: 400px; /* CHANGED: Limit max width */
+    height: 120px;
+    font-size: 18px;
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+    line-height: 90px; /* Centers text vertically */
+    transition: background-color 0.3s ease; /* Smooth transitions */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+    margin-bottom: -30px;
+    clip-path: polygon(
+        0% 0%,   /* Top left corner */
+        100% 0%, /* Top right corner */
+        100% 70%,/* Right side of rectangle */
+        50% 100%,/* Bottom point of triangle */
+        0% 70%   /* Left side of rectangle */
+    );
+    &:hover {
+        background-color: orange; /* Change color on hover */
+    }
+}
+
+/* Shape for the first button (Index 0) */
+.polygon-button{
+    clip-path: polygon(
+        0% 0%,   /* Top left corner */
+        100% 0%, /* Top right corner */
+        100% 70%,/* Right side of rectangle */
+        50% 100%,/* Bottom point of triangle */
+        0% 70%   /* Left side of rectangle */
+    );
+}
+
+/* Chevron shape for subsequent buttons (Index 1, 2, 3...) */
+.polygon-button.index-1, .next-button  {
+    clip-path: polygon(
+        0% 0%,    /* Top left */
+    50% 30%,    /* Top middle inward point */
+    100% 0%,  /* Top right */
+    100% 70%,  /* Bottom right */
+    50% 100%,  /* Bottom middle inward point */
+    0% 70%     /* Bottom left */
+    );
+
+    &:hover {
+        background-color: orange;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+

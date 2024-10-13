@@ -1,0 +1,42 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.menuRow{
+    display: flex;
+    flex-direction: column;
+    width: 55%;
+    margin: auto;
+    @media  screen and (max-width: 768px){
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+        width: 100%;
+        
+    }
+}
+
+.log{
+    justify-content: flex-end;
+}
+.inner-button{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 30px;
+    
+    @media screen and (max-width: 768px){
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        padding: 30px 0;
+        width: 100%;
+        font-size: bolder;
+        
+    }
+}

@@ -1,0 +1,82 @@
+
+
+.head-box{
+    background-color: aqua !important;
+}
+
+.table-container{
+    margin-bottom: 0,5rem;
+}
+
+/* Basic table styling */
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+    border-collapse: collapse; /* Ensure border collapsing for a clean look */
+    table-layout: fixed;
+    margin-bottom: 0,5rem;
+}
+
+@media screen and (max-width: 767px) {
+    .table-wrapper {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        overflow-x: auto; /* Enable horizontal scrolling on small screens */
+        margin-bottom: 1rem; /* Add space below the table */
+        width: 100%;
+        table-layout: fixed;
+
+    }
+
+.inner-box{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    margin: auto;
+    height: 85px;
+    width: 170px;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    border: 1px solid black !important;
+    &:hover{
+            background-color: aqua;
+            cursor: pointer;
+        }
+}
+
+.inner-head{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-left: 5px;
+}
+
+.inner-body{
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-right: 5px;
+}
+    
+}
+
+
+
+
+
+.table-bordered {
+    border: 1px solid #dee2e6; /* Light border around table */
+}
+
+
+
+
+
+
+
+
+
+

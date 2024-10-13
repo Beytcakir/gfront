@@ -1,0 +1,65 @@
+.menuRow {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    padding: 0;
+    width: 55%;
+    margin: auto;
+
+    /* Maintain column layout on all screen sizes */
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 30px 0;
+        width: 100%;
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        width: 100%;
+    }
+
+    @media (max-width: 576px) {
+        flex-direction: column;
+        gap: 20px;
+        padding: 20px 0;
+        width: 100%;
+        .menuDiv {
+            padding: 15px;
+            font-size: 14px;
+        }
+    }
+
+    /* Optional: Set a max height and enable scrolling */
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.menuDiv {
+    padding: 15px;
+    border: 1px solid black;
+    font-weight: 600;
+    border-radius: 10px;
+    transition: all 0.2s ease-in-out;
+    font-size: 18px;
+
+    &:hover {
+        cursor: pointer;
+        background-color: rgb(71, 71, 71) !important;
+        color: rgb(255, 255, 255);
+    }
+
+    /* Adjust font size on smaller screens */
+    @media (max-width: 768px) {
+        font-size: 16px;
+    }
+
+    @media (max-width: 576px) {
+        font-size: 14px;
+    }
+    
+}

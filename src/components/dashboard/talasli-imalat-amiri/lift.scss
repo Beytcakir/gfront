@@ -1,0 +1,79 @@
+.popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.popup-inner {
+    display: flex;
+    flex-direction: column;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.ppopup-button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    gap: 10px;
+}
+
+.inner-button{
+    padding: 10px 20px;
+    width: 100px;
+    height: auto;
+    background: #f08181;
+    cursor: pointer;
+    border-radius: 50px;
+}
+
+/* CHANGED: Added Container styling */
+.container {
+    max-width: 1200px; /* CHANGED: Set a maximum width for the container */
+    margin: 0 auto; /* CHANGED: Center the container horizontally */
+    padding: 20px; /* CHANGED: Add padding around the container */
+    box-sizing: border-box; /* CHANGED: Include padding and border in the element's total width and height */
+}
+
+/* Additional styling for main components */
+.page-header {
+    text-align: center; /* CHANGED: Center align the header text */
+    font-size: 1.5rem; /* CHANGED: Increase font size */
+    font-weight: bold;
+    margin-bottom: 20px; /* CHANGED: Add spacing below header */
+}
+
+
+@media screen {
+    .polygon-button {
+        width: 400px; /* CHANGED: Limit max width */
+        height: 120px;
+        background-color: rgb(158, 156, 156); /* Default background color */
+        color: white;
+        font-size: 18px;
+        font-weight: bold;
+        font-family: Arial, sans-serif;
+        border: none;
+        cursor: pointer;
+        position: relative;
+        text-align: center;
+        line-height: 90px; /* Centers text vertically */
+        transition: background-color 0.3s ease; /* Smooth transitions */
+        margin: 0; /* Remove margin */
+        padding: 0; /* Remove padding */
+        margin-bottom: -30px;
+        &:hover {
+            background-color: rgb(71, 71, 71); /* Darker background color on hover */
+        }
+    }
+    
+}
